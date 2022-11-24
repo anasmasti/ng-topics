@@ -11,6 +11,7 @@ import { ButtonComponent } from './components/shared/button/button.component';
 import { HeaderComponent } from './components/layout/header/header.component';
 import { StoreModule } from '@ngrx/store';
 import { movieReducer } from './store/reducer';
+import { MoviesComponent } from './components/movies/movies.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { movieReducer } from './store/reducer';
     BrowserModule,
     FormsModule,
     HeaderComponent,
+    MoviesComponent,
     StoreModule.forRoot({ movie: movieReducer }),
   ],
   providers: [],

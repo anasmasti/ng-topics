@@ -1,7 +1,5 @@
 <app-layout>
   <h1 class="text-red-400">Movies</h1>
   <app-form (formData)="handleFormData($event)"></app-form>
-  <ng-container *ngFor="let movie of (this.movies$ | async)">
-    <p>{{ movie }}</p>
-  </ng-container>
+  <app-movies *ngFor="let movie of (this.movies$ | async)" [movie]="movie"></app-movies>
 </app-layout>
