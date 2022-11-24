@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Output } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
 import { Store } from '@ngrx/store';
 import { addMovie } from 'src/app/store/actions';
 
@@ -12,6 +13,10 @@ export class FormComponent {
 
   inputData: string = '';
   isSent: boolean = false;
+
+  movieForm = new FormGroup({
+    movie: new FormControl<string | null>('form'),
+  });
 
   constructor(private store: Store) {}
 
@@ -35,5 +40,9 @@ export class FormComponent {
         this.inputData = '';
       }, 10);
     }
+  }
+
+  get movieController() {
+    return this.movieForm.get('movie')?.value;
   }
 }

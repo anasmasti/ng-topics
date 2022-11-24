@@ -2,3 +2,8 @@
     <app-input (inputValueEvent)="handleInputValue($event)" [isSent]="isSent"></app-input>
     <app-button title="Post Data"></app-button>
 </form>
+
+<form [formGroup]="movieForm">
+    <input type="text" formControlName="movie">
+    {{ movieController }}
+</form>

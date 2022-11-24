@@ -6,7 +6,7 @@ import { FooterComponent } from './components/layout/footer/footer.component';
 import { FormComponent } from './components/shared/form/form.component';
 import { InputComponent } from './components/shared/input/input.component';
 import { LayoutComponent } from './components/layout/layout.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ButtonComponent } from './components/shared/button/button.component';
 import { HeaderComponent } from './components/layout/header/header.component';
 import { StoreModule } from '@ngrx/store';
@@ -27,6 +27,7 @@ import { MoviesComponent } from './components/movies/movies.component';
     FormsModule,
     HeaderComponent,
     MoviesComponent,
+    ReactiveFormsModule,
     StoreModule.forRoot({ movie: movieReducer }),
   ],
   providers: [],
