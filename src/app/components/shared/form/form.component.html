@@ -1,9 +1,9 @@
-<form (submit)="postData()">
+<form (submit)="postData()" class="flex gap-2 mb-2">
     <app-input (inputValueEvent)="handleInputValue($event)" [isSent]="isSent"></app-input>
-    <app-button title="Post Data"></app-button>
+    <app-button title="Add Movie"></app-button>
 </form>
 
-<form [formGroup]="movieForm">
-    <input type="text" formControlName="movie">
-    {{ movieController }}
+<form [formGroup]="movieForm" class="flex gap-2">
+    <input type="text" class="bg-gray-800 p-2 rounded-md" placeholder="Type somthing.." formControlName="movie">
+    <p>{{ movieController }}</p>
 </form>

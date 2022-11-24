@@ -15,7 +15,7 @@ export class FormComponent {
   isSent: boolean = false;
 
   movieForm = new FormGroup({
-    movie: new FormControl<string | null>('form'),
+    movie: new FormControl<string | null>(null),
   });
 
   constructor(private store: Store) {}
