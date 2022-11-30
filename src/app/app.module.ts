@@ -12,6 +12,7 @@ import { HeaderComponent } from './components/layout/header/header.component';
 import { StoreModule } from '@ngrx/store';
 import { movieReducer } from './store/reducer';
 import { MoviesComponent } from './components/movies/movies.component';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { MoviesComponent } from './components/movies/movies.component';
     MoviesComponent,
     ReactiveFormsModule,
     StoreModule.forRoot({ movie: movieReducer }),
+    StoreDevtoolsModule.instrument(),
   ],
   providers: [],
   bootstrap: [AppComponent],
