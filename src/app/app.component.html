@@ -3,7 +3,16 @@
   <app-movies *ngFor="let movie of (this.movies$ | async)" [movie]="movie"></app-movies>
 
   <h3 class="font-bold">Users:</h3>
-  <p *ngFor="let user of users" class="text-white">
-    {{ user.name }}
-  </p>
+  <div class="flex gap-2 flex-wrap max-w-xs">
+    <p *ngFor="let user of users" class="text-white p-3 bg-gray-600 rounded-md capitalize">
+      {{ user.name }}
+    </p>
+  </div>
+  <br>
+  <h3 class="font-bold">Jokes:</h3>
+  <div class="flex gap-2 flex-wrap max-w-xs">
+    <p *ngFor="let joke of (jokes$ | async)" class="text-white p-3 bg-gray-600 rounded-md capitalize">
+      {{ joke.content }}
+    </p>
+  </div>
 </app-layout>

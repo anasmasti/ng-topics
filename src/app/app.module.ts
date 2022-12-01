@@ -13,6 +13,7 @@ import { StoreModule } from '@ngrx/store';
 import { movieReducer } from './store/reducer';
 import { MoviesComponent } from './components/movies/movies.component';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
     HeaderComponent,
     MoviesComponent,
     ReactiveFormsModule,
+    HttpClientModule,
     StoreModule.forRoot({ movie: movieReducer }),
     StoreDevtoolsModule.instrument(),
   ],
