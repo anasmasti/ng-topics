@@ -22,6 +22,7 @@ export class AppComponent implements OnInit {
   users: { id: number; name: string }[] = [];
   jokes$: BehaviorSubject<Joke[]> = new BehaviorSubject<Joke[]>([]);
   jokes: Joke[] = [];
+  updatedJokes: Joke[] = [];
 
   constructor(private store: Store, private jokeService: JokeService) {}
 
@@ -92,7 +93,9 @@ export class AppComponent implements OnInit {
     });
 
     setInterval(() => {
-      this.jokes$.next([this.generateJokes(this.generateNumber())]);
-    }, 3000);
+      this.updatedJokes.push(this.generateJokes(this.generateNumber()));
+
+      this.jokes$.next(this.updatedJokes);
+    }, 8000);
   }
 }

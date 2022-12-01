@@ -6,7 +6,7 @@ import { Observable, map } from 'rxjs';
   providedIn: 'root',
 })
 export class JokeService {
-  JOKE_API_URL: string = 'https://v2.jokeapi.dev/joke/Any?amount=10';
+  JOKE_API_URL: string = 'https://v2.jokeapi.dev/joke/Any?amount=11';
 
   constructor(private http: HttpClient) {}
 
